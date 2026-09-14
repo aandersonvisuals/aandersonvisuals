@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>aandersonvisuals | Premium Videography & 3D for E-Commerce</title>
+<meta name="description" content="Elevate your e-commerce brand with cinema-quality videography and photorealistic 3D product visuals engineered for high conversions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Playfair+Display:ital,wght@1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #1c1b1f;
+  --bg-elevated: #262429;
+  --bg-glass: rgba(28, 27, 31, 0.7);
+  --accent: #d98c4a;
+  --accent-soft: #b8703a;
+  --accent-glow: rgba(217, 140, 74, 0.18);
+  --text: #f5f3f0;
+  --text-muted: #a19c9a;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.2);
+  --font-display: "Bricolage Grotesque", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Glowing Background Orbs */
+body::before, body::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -1;
+  pointer-events: none;
+}
+body::before {
+  top: -10%; left: -10%; width: 50vw; height: 50vw;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+}
+body::after {
+  top: 40%; right: -10%; width: 40vw; height: 40vw;
+  background: radial-gradient(circle, rgba(217, 140, 74, 0.08) 0%, transparent 70%);
+}
+
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+a { color: inherit; text-decoration: none; }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #eac08b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.accent-word {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.05em;
+  letter-spacing: 0;
+  line-height: 1.3;
+  display: inline-block;
+}
+
+p { color: var(--text-muted); }
+
+/* --- HEADER --- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-icon { color: var(--accent); }
+.logo-img { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; display: block; }
+.wordmark { 
+  font-family: var(--font-display); 
+  font-weight: 600; 
+  font-size: 1.2rem; 
+  letter-spacing: -0.01em; 
+}
+.nav-links { display: flex; align-items: center; gap: 56px; }
+.nav-link { font-size: 0.95rem; font-weight: 500; color: var(--text-muted); transition: color 0.2s ease; }
+.nav-link:hover { color: var(--text); }
+
+/* --- BUTTONS --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 12px 24px;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.btn:active { transform: scale(0.97); }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-soft) 100%);
+  color: #1c1b1f;
+  box-shadow: 0 4px 24px rgba(217, 140, 74, 0.35);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.btn-primary:hover {
+  box-shadow: 0 6px 32px rgba(217, 140, 74, 0.55);
+  filter: brightness(1.05);
+}
+
+.btn-outline {
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  color: var(--text);
+  backdrop-filter: blur(10px);
+}
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--border-hover);
+}
+
+/* --- HERO --- */
+.hero {
+  padding: 120px 0 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(217, 140, 74, 0.1);
+  border: 1px solid rgba(217, 140, 74, 0.2);
+  color: var(--accent);
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+.hero h1 { font-size: clamp(3rem, 6vw, 4.8rem); margin-bottom: 24px; max-width: 900px; line-height: 1.25; }
+.hero p { font-size: clamp(1.1rem, 2vw, 1.25rem); max-width: 65ch; margin: 0 auto 40px; }
+.hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* --- FEATURES --- */
+.features { padding: 40px 0 80px; border-bottom: 1px solid var(--border); }
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.feature-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 100%);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 40px 32px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+}
+.feature-icon {
+  width: 56px; height: 56px;
+  background: rgba(217, 140, 74, 0.12);
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent);
+  margin-bottom: 24px;
+}
+.feature-icon svg { width: 28px; height: 28px; }
+.feature-card h3 { font-size: 1.55rem; margin-bottom: 16px; color: #fff; }
+.feature-card p { font-size: 1.1rem; margin: 0; }
+
+/* --- PORTFOLIO SECTIONS --- */
+.portfolio { padding: 100px 0; }
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 64px;
+}
+.section-header h2 { font-size: clamp(2.2rem, 4vw, 3rem); margin-bottom: 16px; }
+.section-header p { font-size: 1.1rem; max-width: 50ch; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.video-showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.video-row-vertical {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.video-item.video-tile-vertical { width: min(320px, 100%); }
+.video-item.video-tile-landscape { width: 100%; max-width: 800px; }
+.video-tile-vertical .video-tile { aspect-ratio: 9 / 16; width: 100%; }
+.video-tile-landscape .video-tile { aspect-ratio: 16 / 9; width: 100%; }
+
+.video-tile {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+.video-tile video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1c1b1f;
+  font-size: 1.4rem;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 2;
+  padding: 0;
+}
+.play-button svg { width: 22px; height: 22px; margin-left: 3px; }
+.video-tile:hover .play-button { transform: translate(-50%, -50%) scale(1.06); }
+.video-tile.is-playing .play-button { opacity: 0; pointer-events: none; }
+.video-item { display: flex; flex-direction: column; gap: 12px; align-items: center; width: 100%; }
+.video-caption { font-size: 0.95rem; color: var(--text-muted); text-align: center; margin: 0; }
+
+.tile {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.tile:hover {
+  transform: translateY(-8px) scale(1.01);
+  border-color: var(--accent-soft);
+  box-shadow: 0 20px 40px rgba(217, 140, 74, 0.15);
+}
+.tile video, .tile img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.85);
+  transition: filter 0.4s ease, transform 0.6s ease;
+}
+.tile:hover video, .tile:hover img { 
+  filter: brightness(1.1); 
+  transform: scale(1.03);
+}
+
+.tile-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 32px 24px 24px;
+  background: linear-gradient(0deg, rgba(10,9,11,0.9) 0%, rgba(10,9,11,0) 100%);
+  pointer-events: none;
+}
+.tile-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  font-family: var(--font-display);
+}
+
+.tile-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  border: 1px dashed var(--border-hover);
+  background: rgba(255,255,255,0.01);
+  text-align: center;
+  padding: 20px;
+}
+
+.tile-reveal {
+  position: relative;
+  touch-action: none;
+  cursor: ew-resize;
+  user-select: none;
+}
+.reveal-base, .reveal-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+.reveal-overlay {
+  clip-path: inset(0 50% 0 0);
+}
+.reveal-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background: #fff;
+  transform: translateX(-50%);
+  z-index: 3;
+  pointer-events: none;
+}
+.reveal-handle::after {
+  content: "\2194";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  color: #1c1b1f;
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+}
+.reveal-label {
+  position: absolute;
+  bottom: 14px;
+  left: 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  padding: 6px 14px;
+  border-radius: 100px;
+  pointer-events: none;
+  z-index: 2;
+}
+.reveal-contain { object-fit: contain; background: var(--bg-elevated); }
+
+.corner-label {
+  position: absolute;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  font-family: var(--font-display);
+  background: rgba(6,4,10,0.6);
+  padding: 8px 18px;
+  border-radius: 100px;
+  z-index: 2;
+}
+.corner-top-left { top: 16px; left: 16px; }
+.corner-bottom-right { bottom: 16px; right: 16px; }
+
+/* --- CTA SECTION --- */
+.cta {
+  margin: 60px 32px 100px;
+  border-radius: 32px;
+  background: linear-gradient(135deg, var(--bg-elevated) 0%, rgba(40, 30, 25, 0.8) 100%);
+  border: 1px solid var(--border);
+  padding: 80px 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+.cta::before {
+  content: "";
+  position: absolute; top: -50%; left: 50%; transform: translateX(-50%);
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 60%);
+  z-index: 0; pointer-events: none;
+}
+.cta-inner { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; }
+.cta h2 { font-size: clamp(2.2rem, 4vw, 3rem); color: #fff; margin-bottom: 20px; }
+.cta p { font-size: 1.1rem; margin-bottom: 40px; color: rgba(255,255,255,0.8); }
+.cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* --- FOOTER --- */
+.site-footer { 
+  border-top: 1px solid var(--border); 
+  padding: 40px 0; 
+  background: var(--bg);
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+.footer-socials { display: flex; gap: 16px; }
+.footer-socials a {
+  display: flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+.footer-socials a:hover {
+  background: var(--accent);
+  color: #1c1b1f;
+  border-color: var(--accent);
+}
+
+/* Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .features-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 780px) {
+  .grid { grid-template-columns: 1fr; }
+  .header-inner { padding: 16px; }
+  .nav-links { display: none; }
+}
+a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+</style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo-container">
+        <img src="assets/bg new.png" alt="aandersonvisuals logo" class="logo-img">
+        <span class="wordmark">aandersonvisuals</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#videography" class="nav-link">Videography</a>
+        <a href="#3d-portfolio" class="nav-link">3D Visuals</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <a href="#contact" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.9rem;">
+        Get in touch
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero reveal">
+      <div class="wrap">
+        <h1>Video and 3D production, built <span class="text-gradient accent-word">around yours</span>.</h1>
+        <p>aandersonvisuals is a freelance video and 3D production service. I create social media content, promo videos, and product visuals for businesses who want to stand out online, whether that's through live-action footage or 3D animation. Based in the South West, open to travel.</p>
+        
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">
+            Start a Project
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#videography" class="btn btn-outline">
+            View Portfolio
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEOGRAPHY PORTFOLIO -->
+    <section id="videography" class="portfolio reveal">
+      <div class="wrap">
+        <div class="section-header">
+          <h2>Videography</h2>
+          <p>My previous videography projects.</p>
+        </div>
+
+        <div class="video-showcase">
+          <div class="video-item video-tile-landscape">
+            <div class="video-tile">
+              <video src="assets/Showreel Live.mp4" muted playsinline preload="metadata"></video>
+              <button class="play-button" aria-label="Play video"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg></button>
+            </div>
+            <p class="video-caption">Live showreel, events, music, and more.</p>
+          </div>
+
+          <div class="video-item video-tile-landscape">
+            <div class="video-tile">
+              <video src="assets/SCCC Crack Rock.mp4" muted playsinline preload="metadata"></video>
+              <button class="play-button" aria-label="Play video"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg></button>
+            </div>
+            <p class="video-caption">Somerset County Cricket Club video.</p>
+          </div>
+
+          <div class="video-row-vertical">
+            <div class="video-item video-tile-vertical">
+              <div class="video-tile">
+                <video src="assets/Culture Force.mp4" muted playsinline preload="metadata"></video>
+                <button class="play-button" aria-label="Play video"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg></button>
+              </div>
+              <p class="video-caption">Test edit.</p>
+            </div>
+            <div class="video-item video-tile-vertical">
+              <div class="video-tile">
+                <video src="assets/Seamless-Final Video.mp4" muted playsinline preload="metadata"></video>
+                <button class="play-button" aria-label="Play video"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg></button>
+              </div>
+              <p class="video-caption">A seamless edit for social media.</p>
+            </div>
+          </div>
+
+          <div class="video-item video-tile-landscape">
+            <div class="video-tile">
+              <video src="assets/Instinct Boxing.mp4" muted playsinline preload="metadata"></video>
+              <button class="play-button" aria-label="Play video"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg></button>
+            </div>
+            <p class="video-caption">Dedicated gym promo video.</p>
+          </div>
+
+          <div class="video-item video-tile-landscape">
+            <div class="video-tile">
+              <video src="assets/Wolfcut Final.mp4" muted playsinline preload="metadata"></video>
+              <button class="play-button" aria-label="Play video"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg></button>
+            </div>
+            <p class="video-caption">Dedicated barber shop video.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D PORTFOLIO -->
+    <section id="3d-portfolio" class="portfolio reveal">
+      <div class="wrap">
+        <div class="section-header">
+          <h2>3D visuals</h2>
+          <p>I created these projects inside Blender.</p>
+        </div>
+
+        <div class="grid">
+          <div class="tile">
+            <img src="assets/0057.png" alt="3D product render" loading="lazy">
+            <span class="corner-label corner-top-left">Cosmetics</span>
+          </div>
+
+          <div class="tile tile-reveal">
+            <img src="assets/0071.png" alt="Fully rendered 3D scene" class="reveal-base reveal-contain" loading="lazy">
+            <img src="assets/can workbench0071.png" alt="Blender workbench view of the same scene" class="reveal-overlay reveal-contain" loading="lazy">
+            <div class="reveal-handle"></div>
+            <span class="reveal-label">Drag to reveal</span>
+          </div>
+
+          <div class="tile tile-reveal">
+            <img src="assets/0065.png" alt="Fully rendered 3D scene" class="reveal-base" loading="lazy">
+            <img src="assets/selfie workbench0065.png" alt="Blender workbench view of the same scene" class="reveal-overlay" loading="lazy">
+            <div class="reveal-handle"></div>
+            <span class="reveal-label">Drag to reveal</span>
+          </div>
+
+          <div class="tile">
+            <img src="assets/0128.png" alt="3D product render" loading="lazy">
+            <span class="corner-label corner-bottom-right">Hero Shot Insta 360</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="reveal">
+      <div class="cta">
+        <div class="cta-inner">
+          <h2>Let's talk about your project.</h2>
+          <p>I'd love to hear about your project. Send a message and we can talk through timelines, pricing, and ideas.</p>
+          <div class="cta-actions">
+            <a href="mailto:aandersonvisual@gmail.com" class="btn btn-primary" style="padding: 18px 40px; font-size: 1.15rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2-2 2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              Email Us
+            </a>
+          </div>
+          <p style="margin-top: 24px; font-size: 0.9rem;">If the email link doesn't work, reach me directly at aandersonvisual@gmail.com</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="logo-container" style="opacity: 0.7;">
+        <svg class="logo-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+          <polyline points="2 17 12 22 22 17"></polyline>
+          <polyline points="2 12 12 17 22 12"></polyline>
+        </svg>
+        <span class="wordmark" style="font-size: 1rem;">aandersonvisuals</span>
+      </div>
+      
+      <span>© 2026 aandersonvisuals. All rights reserved. <a href="mailto:aandersonvisual@gmail.com" style="color: inherit; text-decoration: underline;">aandersonvisual@gmail.com</a></span>
+
+      <div class="footer-socials">
+        <a href="https://instagram.com/aandersonvisuals" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+document.querySelectorAll('video, img').forEach(function (media) {
+  media.addEventListener('error', function () {
+    media.closest('.tile')?.classList.add('media-missing');
+  });
+});
+
+// Tap-to-play videography tiles
+document.querySelectorAll('.video-tile').forEach(function (tile) {
+  const video = tile.querySelector('video');
+  const btn = tile.querySelector('.play-button');
+  if (!video || !btn) return;
+
+  function togglePlay() {
+    if (video.paused) {
+      document.querySelectorAll('.video-tile video').forEach(function (v) {
+        if (v !== video) {
+          v.pause();
+          v.closest('.video-tile')?.classList.remove('is-playing');
+        }
+      });
+      video.play();
+      tile.classList.add('is-playing');
+    } else {
+      video.pause();
+      tile.classList.remove('is-playing');
+    }
+  }
+
+  btn.addEventListener('click', function (e) { e.stopPropagation(); togglePlay(); });
+  video.addEventListener('click', togglePlay);
+  video.addEventListener('ended', function () { tile.classList.remove('is-playing'); });
+});
+
+// Drag-to-reveal for workbench-to-render tiles
+document.querySelectorAll('.tile-reveal').forEach(function (tile) {
+  const overlay = tile.querySelector('.reveal-overlay');
+  const handle = tile.querySelector('.reveal-handle');
+  if (!overlay || !handle) return;
+
+  let dragging = false;
+
+  function setPosition(clientX) {
+    const rect = tile.getBoundingClientRect();
+    let x = clientX - rect.left;
+    x = Math.min(Math.max(x, 0), rect.width);
+    const percent = (x / rect.width) * 100;
+    overlay.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+    handle.style.left = percent + '%';
+  }
+
+  tile.addEventListener('pointerdown', function (e) {
+    dragging = true;
+    tile.setPointerCapture(e.pointerId);
+    setPosition(e.clientX);
+  });
+  tile.addEventListener('pointermove', function (e) {
+    if (dragging) setPosition(e.clientX);
+  });
+  tile.addEventListener('pointerup', function () { dragging = false; });
+  tile.addEventListener('pointercancel', function () { dragging = false; });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const reveals = document.querySelectorAll('.reveal');
+
+  const revealOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  });
+
+  reveals.forEach(reveal => {
+    revealOnScroll.observe(reveal);
+  });
+  
+  setTimeout(() => {
+    document.querySelector('.hero.reveal')?.classList.add('active');
+  }, 100);
+});
+</script>
+</body>
+</html>
