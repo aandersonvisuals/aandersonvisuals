@@ -52,17 +52,13 @@ body {
 }
 
 /* Glowing Background Orbs */
-body::before, body::after {
+body::after {
   content: "";
   position: absolute;
   border-radius: 50%;
   filter: blur(120px);
   z-index: -1;
   pointer-events: none;
-}
-body::before {
-  top: -10%; left: -10%; width: 50vw; height: 50vw;
-  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
 }
 body::after {
   top: 40%; right: -10%; width: 40vw; height: 40vw;
@@ -127,9 +123,23 @@ p { color: var(--text-muted); }
   font-size: 1.2rem; 
   letter-spacing: -0.01em; 
 }
-.nav-links { display: flex; align-items: center; gap: 56px; }
-.nav-link { font-size: 0.95rem; font-weight: 500; color: var(--text-muted); transition: color 0.2s ease; }
-.nav-link:hover { color: var(--text); }
+.nav-links { display: flex; align-items: center; gap: 16px; }
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text);
+  padding: 8px 20px;
+  border-radius: 100px;
+  background: rgba(217, 140, 74, 0.06);
+  border: 1px solid rgba(217, 140, 74, 0.14);
+  box-shadow: 0 0 22px rgba(217, 140, 74, 0.1);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.nav-link:hover {
+  background: rgba(217, 140, 74, 0.14);
+  border-color: rgba(217, 140, 74, 0.4);
+  box-shadow: 0 0 28px rgba(217, 140, 74, 0.28);
+}
 
 /* --- BUTTONS --- */
 .btn {
@@ -488,8 +498,8 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-
     <!-- HERO -->
     <section class="hero reveal">
       <div class="wrap">
-        <h1>Video and 3D production, built <span class="text-gradient accent-word">around yours</span>.</h1>
-        <p>aandersonvisuals is a freelance video and 3D production service. I create social media content, promo videos, and product visuals for businesses who want to stand out online, whether that's through live-action footage or 3D animation. Based in the South West, open to travel.</p>
+        <h1>Video and 3D production<br>service</h1>
+        <p>aandersonvisuals is a freelance video and 3D production service. We create social media content, promo videos, and product visuals for businesses who want to stand out online, whether that's through live-action footage or 3D animation. Based in the South West, open to travel.</p>
         
         <div class="hero-actions">
           <a href="#contact" class="btn btn-primary">
@@ -508,7 +518,7 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-
       <div class="wrap">
         <div class="section-header">
           <h2>Videography</h2>
-          <p>My previous videography projects.</p>
+          <p>Videography projects.</p>
         </div>
 
         <div class="video-showcase">
@@ -534,7 +544,7 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-
                 <video src="assets/Culture Force.mp4" muted playsinline preload="metadata"></video>
                 <button class="play-button" aria-label="Play video"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg></button>
               </div>
-              <p class="video-caption">Test edit.</p>
+              <p class="video-caption">Short form editing.</p>
             </div>
             <div class="video-item video-tile-vertical">
               <div class="video-tile">
@@ -569,7 +579,7 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-
       <div class="wrap">
         <div class="section-header">
           <h2>3D visuals</h2>
-          <p>I created these projects inside Blender.</p>
+          <p>These projects were created in Blender.</p>
         </div>
 
         <!-- Link to the separate 3D videos page -->
@@ -617,14 +627,14 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-
       <div class="cta">
         <div class="cta-inner">
           <h2>Let's talk about your project.</h2>
-          <p>I'd love to hear about your project. Send a message and we can talk through timelines, pricing, and ideas.</p>
+          <p>We'd love to hear about your project. Send a message and we can talk through timelines, pricing, and ideas.</p>
           <div class="cta-actions">
             <a href="mailto:aandersonvisual@gmail.com" class="btn btn-primary" style="padding: 18px 40px; font-size: 1.15rem;">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2-2 2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
               Email Us
             </a>
           </div>
-          <p style="margin-top: 24px; font-size: 0.9rem;">If the email link doesn't work, reach me directly at aandersonvisual@gmail.com</p>
+          <p style="margin-top: 24px; font-size: 0.9rem;">If the email link doesn't work, reach us directly at aandersonvisual@gmail.com</p>
         </div>
       </div>
     </section>
